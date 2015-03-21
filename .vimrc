@@ -13,6 +13,7 @@ set showmatch
 
 set autoread
 set paste
+set ruler
 
 "== smart search ==
 set incsearch
@@ -37,3 +38,4 @@ set cursorline
 "maps
 map <F2> :tabnew<CR>
 map <F3> gt
+map <F4> :NERDTree<CR>
