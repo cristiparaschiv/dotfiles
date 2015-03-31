@@ -14,6 +14,16 @@ set showmatch
 set autoread
 set paste
 set ruler
+set laststatus=2
+"set list listchars=tab:→\ ,trail:▸
+
+"== folding ==
+if has("folding")
+    set foldcolumn=0
+    set foldmethod=indent
+    set foldlevel=9
+    set nofoldenable
+endif
 
 "== smart search ==
 set incsearch
