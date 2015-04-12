@@ -21,3 +21,4 @@ nitrogen --restore &
 tint2 &
 volumeicon &
 (sleep 3 && nm-applet --sm-disable) &
+xfce4-power-manager &
