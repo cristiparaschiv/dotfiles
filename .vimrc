@@ -6,14 +6,17 @@ set shiftround
 set smarttab
 set softtabstop=4
 
+syntax on
+
 set number
+set relativenumber
 set showcmd
 filetype indent on
 set showmatch
 
 set autoread
 set paste
-set ruler
+"set ruler
 set laststatus=2
 "set list listchars=tab:→\ ,trail:▸
 
@@ -42,10 +45,20 @@ exec "set lcs=tab:\uBB\uBB,trail:\uB7,nbsp:~"
 
 "== colors ==
 set t_Co=256
-colorscheme xoria256
+"colorscheme xoria256
+colorscheme gruvbox
+set background=dark
 set cursorline
 
 "maps
 map <F2> :tabnew<CR>
 map <F3> gt
 map <F4> :NERDTree<CR>
+
+set rtp+=/usr/lib/python3.5/site-packages/powerline/bindings/vim/
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+autocmd FileType perl set commentstring=#\ %s
